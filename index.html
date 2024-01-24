@@ -1,0 +1,791 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome To Our Hockey Club</title>
+
+    <!-- Tailwind and DaisyUI CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.6.0/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Google font Manrope -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- font Awesome setup -->
+    <script src="https://kit.fontawesome.com/95b137b60a.js" crossorigin="anonymous"></script>
+
+    <!-- Font Style  -->
+    <style>
+        .font-poppins{
+            font-family: 'Manrope', sans-serif;
+        }
+        #comma{
+            color: red;
+        }
+      
+        @media screen and (min-width:577px)  {
+            .hideInLg{
+                display: none;
+        }
+        }
+
+        @media screen and (max-width:576px) {
+                .hide, .hideInSm{
+                    display: none;
+                }
+        }
+    </style>
+    
+</head>
+
+<body class="font-poppins " >
+    <header class="md:container xl:mx-auto shadow-xl" >
+        <nav>
+            <div class="navbar bg-base-100">
+                <div class="flex-1">  <!-- "navbar-start" class will make the content justify-between effect; flex-1 makes gap between two divs -->
+                    <div class="dropdown">
+                        <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
+                        </div>
+                        <ul tabindex="0" class="menu text-base menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
+                            <li><a>Home</a></li>
+                            <li><a>About</a></li>
+                            <li><a>Pages</a></li>
+                            <li><a>Blog</a></li>
+                            <li><a>Contact</a></li>
+                        </ul>
+                        
+                    </div>
+
+
+                  <div class=" flex justify-between flex-1">
+                        <div>
+                            <h1><button class="btn btn-ghost text-4xl  gap-0">Hockey<span id="comma">'</span>s</button></h1>
+                            <!-- <aclass="btn btn-ghost text-4xl gap-0">Hockey<span class="text-red">n't</span> <span class="gap-0">s</span> 
+                            </a> -->
+                        </div>
+        
+                        <div class=" hidden lg:flex justify-between text-">
+                            <ul class="menu text-base menu-horizontal px-1 flex ">
+                            <li><a>Home</a></li>
+                            <li><a>About</a></li>
+                            <li><a>Pages</a></li>
+                            <li><a>Blog</a></li>
+                            <li><a>Contact</a></li>
+                            </ul>
+                            
+                        </div>
+                        <div class=" flex justify-center items-center gap-4"> <!-- class"navbar-end w-auto" will show same effect -->
+                            <div class="hide"><i class="fa-solid fa-magnifying-glass"></i></div>
+                            <a class="btn  btn-error text-white bg-bike-primary">Get Ticket</a>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+              
+        </nav>
+
+        <!-- slider/carousel part -->
+        <div>
+            <div class="carousel w-full relative">
+                <div id="slide1" class="carousel-item relative w-full">
+                  <img src="./images/1.png" class="w-full" />
+                  <div class="absolute flex gap-5 transform translate-y-1/2 left-1 right-1 top-3/4">
+                    <a href="#slide4" class="btn btn-circle text-blue-100 bg-slate-900">❮</a> 
+                    <a href="#slide2" class="btn btn-circle  text-blue-100 bg-slate-900 ">❯</a>
+                  </div>
+                </div> 
+                <div id="slide2" class="carousel-item relative w-full">
+                  <img src="./images/img2.jpeg" class="w-full" />
+                  <div class="absolute flex gap-5 transform translate-y-1/2 left-1 right-1 top-3/4">
+                    <a href="#slide1" class="btn btn-circle text-blue-100 bg-slate-900">❮</a> 
+                    <a href="#slide3" class="btn btn-circle  text-blue-100 bg-slate-900 ">❯</a>
+                  </div>
+                </div> 
+                <div id="slide3" class="carousel-item relative w-full">
+                  <img src="./images/img3.jpeg" class="w-full" />
+                  <div class="absolute flex gap-5 transform translate-y-1/2 left-1 right-1 top-3/4">
+                    <a href="#slide2" class="btn btn-circle text-blue-100 bg-slate-900">❮</a> 
+                    <a href="#slide1" class="btn btn-circle  text-blue-100 bg-slate-900 ">❯</a>
+                  </div>
+                </div> 
+            </div>
+            <div class=" w-[395px] lg:w-[450px] h-[200px] lg:h-[152px] pt-7 pl-10 pr-10 pb-10 space-y-5 text-white bg-black rounded-xl lg:absolute top-[498px] left-[750px] lg:top-[580px] lg:left-[640px] ">
+                <h2 class="text-xl text-[#FFF]" >Meet All The Heroes From The Field</h2>
+                <p class="text-sm text-zinc-500">Discover extraordinary heroes from the field—innovators, leaders, and game-changers united in a mission to shape a better future. #FieldHeroes</p>
+
+            </div>
+        </div>
+    </header>
+
+
+
+
+    <main class="xl:container xl:mx-auto">
+
+            <!-- Professional Hockeys Club Section starts here -->
+            
+        <section class="mt-20 mb-32">
+            
+            <div class="text-center space-y-5">
+                <h1 class="text-4xl font-bold ">Professional Hockeys Club</h1>
+                <p class="text-zinc-500">Elevate Your Game: Join Our Premier Hockey Club! Expert Coaching, State-of-the-Art  Facilities, and a Community <br> of Passionate Players Await. Unleash Your Potential Now!</p>
+            </div>
+
+            <div class="lg:flex items-center gap-11 pt-10 lg:pt-10">
+                 <!-- circle 1 -->
+                <div class="flex flex-col items-center space-y-3 lg:pt-10">
+                    <div class="radial-progress text-red-500 bg-gradient-to-l from-white to-[#d9d9dd] rotate-[130deg] " style="--value:87;" role="progressbar"> <span class="-rotate-[130deg] text-black font-bold">87%</span></div>
+                    <h3 class="text-xl font-semibold">Player Facility</h3>
+                    <p class="text-center text-zinc-500">Top-notch and elite player facility for ultimate training.</p>
+                </div>
+
+                <!-- circle 2 -->
+                <div class="flex flex-col items-center space-y-3 pt-10">
+                    <div class="radial-progress text-[#49D293] rotate-[120deg]" style="--value:95;" role="progressbar"> <span class="-rotate-[120deg] text-black font-bold">95%</span></div>
+                    <h3 class="text-xl font-semibold">Experienced Coach</h3>
+                    <p class="text-center text-zinc-500">Guiding success with seasoned expertise and high success.</p>
+
+                </div>
+                <!-- circle 3 -->
+                <div class="flex flex-col items-center space-y-3 pt-10">
+                    <div class="radial-progress text-orange-400 rotate-[140deg]" style="--value:87;" role="progressbar"> <span class="-rotate-[140deg] text-black font-bold">90%</span></div>
+
+                    <h3 class="text-xl font-semibold">Senior Player </h3>
+                    <p class="text-center text-zinc-500">Senior player: Wisdom, skill, leadership.</p>
+
+                </div>
+                <!-- circle 4 -->
+                <div class="flex flex-col items-center space-y-3 pt-10">
+                    <div class="radial-progress text-blue-500 rotate-[153deg]" style="--value:80;" role="progressbar"> <span class="-rotate-[153deg] text-black font-bold">80%</span></div>
+
+                    <h3 class="text-xl font-semibold">Training Ground</h3>
+                    <p class="text-center text-zinc-500 from-neutral-400" >Optimal training ground: Peak performance begins here.</p>
+
+                </div>
+            </div>
+
+
+            
+        </section>
+        
+        <!-- Program Sections  -->
+        <section class="mb-12 shadow">
+
+            <div class="text-center mb-10">
+                <h1 class="text-3xl font-bold mb-8">Program Sections</h1>
+                <p>Explore our hockey club programs: Skill Development, Fitness Training, Team Building. Unlock your <br> full potential with our comprehensive and tailored training sections. Join now!</p>
+            </div>
+
+            <div class="lg:flex gap-6">
+                <div class="bg-cover object-cover bg-center p-16 pt-6  mb-2 space-y-6" style="background-image: url(./images/2.png)">
+                    <h1 class="text-xl font-bold text-white">Junior Program</h1>
+                    <p class="text-white"> Discover excellence in our Junior Hockey Program! Expert coaching, skill development, and a supportive community. Enriching young players' journeys. Elevate skills, foster teamwork, and join the excitement today!</p>
+                    <button class="bg-[#FF4240] text-white font-bold w-36 h-10 rounded-lg  hover:bg-lime-600">Register Now!</button>
+                </div>
+                <div class="bg-cover object-cover bg-center p-16 pt-6  mb-2 space-y-6" style="background-image: url(./images/3.png)">
+                    <h1 class="text-xl font-bold text-white">Junior Program</h1>
+                    <p class="text-white"> Unleash potential in our Teen Hockey Program! Expert coaching, tailored development, and a vibrant community. Elevate skills, build camaraderie, and join the excitement. Sign up for success today!</p>
+                    <button class="bg-[#FF4240] text-white font-bold w-36 h-10 rounded-lg  hover:bg-lime-600">Register Now!</button>
+                </div>
+
+                <!-- <div class="bg-cover bg-center p-16 pt-6 space-y-6" style="background-image: url(./images/3.png)">
+                    <h1 class="text-xl font-bold text-white">Teenager Program</h1>
+                    <p class="text-white"> Unleash potential in our Teen Hockey Program! Expert coaching, tailored development, and a vibrant community. Elevate skills, build camaraderie, and join the excitement. Sign up for success today!</p>
+                    <button class="bg-[#FF4240] text-white font-bold w-36 h-10 rounded-lg  hover:bg-lime-600">Register Now!</button>
+                </div> -->
+            </div>
+                  
+            <div class="-mt-16">
+                <div class="bg-gradient-to-tr from-slate-700 to bg-slate-500  xl:w-full relative mt-20">
+                    <img src="./images/4.png" alt=""  class="w-fit h-full  absolute mix-blend-overlay">
+                    <div class="pt-72 pb-6 pl-10 ">
+                        <h1 class="text-4xl font-bold text-white pb-6">Professional Program</h1>
+                        <p class="lg:w-[560px] text-white"> Elevate your game with our Professional Hockey Program! World-class coaching, advanced training, and elite community. Join a league of excellence. Level up your skills and career. Enroll now!</p>
+                        <button class="mt-5 mb-6 relative bg-[#FF4240] text-white font-bold w-36 h-10 rounded-lg  hover:bg-lime-600">Register Now!</button>
+                    </div>
+                    
+                </div>
+            </div>
+        </section>
+
+        <!-- Our New Products -->
+        <section class="mb-10 shadow">
+            <div class="text-center pt-12 pb-12 space-y-4">
+                <h1 class="text-2xl font-bold">Our New Products</h1>
+                <p>Gear up for success with our new hockey products! Unleash innovation, performance, and style. <br> Elevate your game—shop the latest now!</p>
+            </div>
+
+            <!-- red shirt and green ball -->
+            <div class="lg:flex gap-6 justify-center">
+                <!-- Red Shirt -->
+                <div class="lg:flex gap-4 mb-4 p-7 border-2 border-[#1313181A] lg:w-6/12 rounded-xl">
+                    <img class="pl-11 lg:pl-0 w-[280px]" src="./images/5.png" alt="">
+    
+                    <div>
+                        <div class="flex items-center gap-8">
+                            <div class="flex items-center gap-2">
+                                <i class="fa-solid fa-star text-3xl text-[#F99808]" aria-hidden="true"></i>
+                                <h3>5.0</h3>
+                            </div>
+        
+                            <div class="flex items-center gap-2">
+                                <img class="w-8 h-8"  src="./images/eye.svg" alt="" >
+                                <p>20</p>
+                            </div>
+                            
+                            <div class="flex items-center gap-2">
+                                <i class="fa-regular  text-3xl text-slate-400 fa-heart"></i>
+                                <p>200</p>
+                            </div>
+                            
+                        </div>
+        
+                        
+                        <div class="pb-5">
+                            <h2 class="text-xl font-bold pt-5 pb-3 ">World Cup Flags Football</h2>
+                            <p>Dolor sit amet consectetur. Ut urna diam quis sagittis. </p>
+                        </div>
+        
+                        <div>
+                            <div class="flex gap-5">
+                                <h2 class="text-[#FF4240] text-xl font-bold">Price - $22.00</h2>
+                                <div class="flex gap-3">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                        <g clip-path="url(#clip0_7_227)">
+                                          <path d="M4 18.9998C4 19.5302 4.21071 20.0389 4.58579 20.414C4.96086 20.789 5.46957 20.9998 6 20.9998C6.53043 20.9998 7.03914 20.789 7.41421 20.414C7.78929 20.0389 8 19.5302 8 18.9998C8 18.4693 7.78929 17.9606 7.41421 17.5855C7.03914 17.2105 6.53043 16.9998 6 16.9998C5.46957 16.9998 4.96086 17.2105 4.58579 17.5855C4.21071 17.9606 4 18.4693 4 18.9998Z" stroke="#89898B" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                          <path d="M12 16.9998H6V2.99976H4" stroke="#89898B" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                          <path d="M6 4.99976L20 5.99976L19.284 11.0108M14 12.9998H6" stroke="#89898B" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                          <path d="M21.121 20.1208C21.5406 19.7013 21.8265 19.1667 21.9423 18.5847C22.0581 18.0028 21.9988 17.3995 21.7717 16.8513C21.5447 16.3031 21.1602 15.8345 20.6668 15.5048C20.1734 15.1751 19.5934 14.9991 19 14.9991C18.4066 14.9991 17.8266 15.1751 17.3332 15.5048C16.8398 15.8345 16.4553 16.3031 16.2283 16.8513C16.0012 17.3995 15.9419 18.0028 16.0577 18.5847C16.1735 19.1667 16.4594 19.7013 16.879 20.1208C17.297 20.5398 18.004 21.1658 19 21.9998C20.051 21.1098 20.759 20.4838 21.121 20.1208Z" stroke="#89898B" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                          <path d="M19 17.9998V18.0098" stroke="#89898B" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                        </g>
+                                        <defs>
+                                          <clipPath id="clip0_7_227">
+                                            <rect width="24" height="24" fill="white" transform="translate(0 -0.000244141)"/>
+                                          </clipPath>
+                                        </defs>
+                                      </svg>
+                                    <p> Delivery Fee : Free</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Green Ball -->
+                <div class="lg:flex gap-4 mb-4 lg:p-7 border-2 border-[#1313181A] lg:w-6/12 lg:h-6/12 rounded-xl">
+                    <img class="pl-11 lg:pl-0 w-[280px]"  src="./images/6.png" alt="" >
+    
+                    <div>
+                        <div class="flex lg:items-center   gap-8">
+                            <div class="flex items-center gap-2">
+                                <i class="fa-solid fa-star text-3xl text-[#F99808]" aria-hidden="true"></i>
+                                <h3>5.0</h3>
+                            </div>
+        
+                            <div class="flex items-center gap-2">
+                                <img class="w-8 h-8 "  src="./images/eye.svg" alt="" >
+                                <p>20</p>
+                            </div>
+                            
+                            <div class="flex items-center gap-2">
+                                <i class="fa-regular  text-3xl text-slate-400 fa-heart"></i>
+                                <p>200</p>
+                            </div>
+                            
+                        </div>
+        
+                        
+                        <div class="pb-5">
+                            <h2 class="text-xl font-bold pt-5 pb-3 ">World Cup Flags Football</h2>
+                            <p>Dolor sit amet consectetur. Ut urna diam quis sagittis. </p>
+                        </div>
+        
+                        <div>
+                            <div class="flex gap-5">
+                                <h2 class="text-[#FF4240] text-xl font-bold">Price - $22.00</h2>
+                                <div class="flex gap-3">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                        <g clip-path="url(#clip0_7_227)">
+                                          <path d="M4 18.9998C4 19.5302 4.21071 20.0389 4.58579 20.414C4.96086 20.789 5.46957 20.9998 6 20.9998C6.53043 20.9998 7.03914 20.789 7.41421 20.414C7.78929 20.0389 8 19.5302 8 18.9998C8 18.4693 7.78929 17.9606 7.41421 17.5855C7.03914 17.2105 6.53043 16.9998 6 16.9998C5.46957 16.9998 4.96086 17.2105 4.58579 17.5855C4.21071 17.9606 4 18.4693 4 18.9998Z" stroke="#89898B" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                          <path d="M12 16.9998H6V2.99976H4" stroke="#89898B" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                          <path d="M6 4.99976L20 5.99976L19.284 11.0108M14 12.9998H6" stroke="#89898B" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                          <path d="M21.121 20.1208C21.5406 19.7013 21.8265 19.1667 21.9423 18.5847C22.0581 18.0028 21.9988 17.3995 21.7717 16.8513C21.5447 16.3031 21.1602 15.8345 20.6668 15.5048C20.1734 15.1751 19.5934 14.9991 19 14.9991C18.4066 14.9991 17.8266 15.1751 17.3332 15.5048C16.8398 15.8345 16.4553 16.3031 16.2283 16.8513C16.0012 17.3995 15.9419 18.0028 16.0577 18.5847C16.1735 19.1667 16.4594 19.7013 16.879 20.1208C17.297 20.5398 18.004 21.1658 19 21.9998C20.051 21.1098 20.759 20.4838 21.121 20.1208Z" stroke="#89898B" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                          <path d="M19 17.9998V18.0098" stroke="#89898B" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                        </g>
+                                        <defs>
+                                          <clipPath id="clip0_7_227">
+                                            <rect width="24" height="24" fill="white" transform="translate(0 -0.000244141)"/>
+                                          </clipPath>
+                                        </defs>
+                                      </svg>
+                                    <p> Delivery Fee : Free</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <!-- Yellow hand back blue shirt -->
+            <div class="lg:flex gap-6 justify-center">
+                <!-- Yellow Hat -->
+                <div class="lg:flex gap-4 mb-4 p-7 border-2 border-[[#1313181A]] lg:w-6/12 rounded-xl">
+                    <img class="pl-11 lg:pl-0 w-[280px]" src="./images/7.png" alt="">
+    
+                    <div>
+                        <div class="flex items-center gap-8">
+                            <div class="flex items-center gap-2">
+                                <i class="fa-solid fa-star text-3xl text-[#F99808]" aria-hidden="true"></i>
+                                <h3>5.0</h3>
+                            </div>
+        
+                            <div class="flex items-center gap-2">
+                                <img class="w-8 h-8"  src="./images/eye.svg" alt="" >
+                                <p>20</p>
+                            </div>
+                            
+                            <div class="flex items-center gap-2">
+                                <i class="fa-regular  text-3xl text-slate-400 fa-heart"></i>
+                                <p>200</p>
+                            </div>
+                            
+                        </div>
+        
+                        
+                        <div class="pb-5">
+                            <h2 class="text-xl font-bold pt-5 pb-3 ">World Cup Flags Football</h2>
+                            <p>Dolor sit amet consectetur. Ut urna diam quis sagittis. </p>
+                        </div>
+        
+                        <div>
+                            <div class="flex gap-5">
+                                <h2 class="text-[#FF4240] text-xl font-bold">Price - $22.00</h2>
+                                <div class="flex gap-3">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                        <g clip-path="url(#clip0_7_227)">
+                                          <path d="M4 18.9998C4 19.5302 4.21071 20.0389 4.58579 20.414C4.96086 20.789 5.46957 20.9998 6 20.9998C6.53043 20.9998 7.03914 20.789 7.41421 20.414C7.78929 20.0389 8 19.5302 8 18.9998C8 18.4693 7.78929 17.9606 7.41421 17.5855C7.03914 17.2105 6.53043 16.9998 6 16.9998C5.46957 16.9998 4.96086 17.2105 4.58579 17.5855C4.21071 17.9606 4 18.4693 4 18.9998Z" stroke="#89898B" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                          <path d="M12 16.9998H6V2.99976H4" stroke="#89898B" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                          <path d="M6 4.99976L20 5.99976L19.284 11.0108M14 12.9998H6" stroke="#89898B" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                          <path d="M21.121 20.1208C21.5406 19.7013 21.8265 19.1667 21.9423 18.5847C22.0581 18.0028 21.9988 17.3995 21.7717 16.8513C21.5447 16.3031 21.1602 15.8345 20.6668 15.5048C20.1734 15.1751 19.5934 14.9991 19 14.9991C18.4066 14.9991 17.8266 15.1751 17.3332 15.5048C16.8398 15.8345 16.4553 16.3031 16.2283 16.8513C16.0012 17.3995 15.9419 18.0028 16.0577 18.5847C16.1735 19.1667 16.4594 19.7013 16.879 20.1208C17.297 20.5398 18.004 21.1658 19 21.9998C20.051 21.1098 20.759 20.4838 21.121 20.1208Z" stroke="#89898B" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                          <path d="M19 17.9998V18.0098" stroke="#89898B" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                        </g>
+                                        <defs>
+                                          <clipPath id="clip0_7_227">
+                                            <rect width="24" height="24" fill="white" transform="translate(0 -0.000244141)"/>
+                                          </clipPath>
+                                        </defs>
+                                      </svg>
+                                    <p> Delivery Fee : Free</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Black-steelblue t-shirt -->
+                <div class="lg:flex gap-4 mb-4 p-7 border-2 border-[[#1313181A]] lg:w-6/12 h-6/12 rounded-xl">
+                    <img class="pl-11 lg:pl-0 w-[280px]"  src="./images/8.png" alt="" >
+    
+                    <div>
+                        <div class="flex items-center gap-8">
+                            <div class="flex items-center gap-2">
+                                <i class="fa-solid fa-star text-3xl text-[#F99808]" aria-hidden="true"></i>
+                                <h3>5.0</h3>
+                            </div>
+        
+                            <div class="flex items-center gap-2">
+                                <img class="w-8 h-8 "  src="./images/eye.svg" alt="" >
+                                <p>20</p>
+                            </div>
+                            
+                            <div class="flex items-center gap-2">
+                                <i class="fa-regular  text-3xl text-slate-400 fa-heart"></i>
+                                <p>200</p>
+                            </div>
+                            
+                        </div>
+        
+                        
+                        <div class="pb-5">
+                            <h2 class="text-xl font-bold pt-5 pb-3 ">World Cup Flags Football</h2>
+                            <p>Dolor sit amet consectetur. Ut urna diam quis sagittis. </p>
+                        </div>
+        
+                        <div>
+                            <div class="flex gap-5">
+                                <h2 class="text-[#FF4240] text-xl font-bold">Price - $22.00</h2>
+                                <div class="flex gap-3">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                        <g clip-path="url(#clip0_7_227)">
+                                          <path d="M4 18.9998C4 19.5302 4.21071 20.0389 4.58579 20.414C4.96086 20.789 5.46957 20.9998 6 20.9998C6.53043 20.9998 7.03914 20.789 7.41421 20.414C7.78929 20.0389 8 19.5302 8 18.9998C8 18.4693 7.78929 17.9606 7.41421 17.5855C7.03914 17.2105 6.53043 16.9998 6 16.9998C5.46957 16.9998 4.96086 17.2105 4.58579 17.5855C4.21071 17.9606 4 18.4693 4 18.9998Z" stroke="#89898B" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                          <path d="M12 16.9998H6V2.99976H4" stroke="#89898B" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                          <path d="M6 4.99976L20 5.99976L19.284 11.0108M14 12.9998H6" stroke="#89898B" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                          <path d="M21.121 20.1208C21.5406 19.7013 21.8265 19.1667 21.9423 18.5847C22.0581 18.0028 21.9988 17.3995 21.7717 16.8513C21.5447 16.3031 21.1602 15.8345 20.6668 15.5048C20.1734 15.1751 19.5934 14.9991 19 14.9991C18.4066 14.9991 17.8266 15.1751 17.3332 15.5048C16.8398 15.8345 16.4553 16.3031 16.2283 16.8513C16.0012 17.3995 15.9419 18.0028 16.0577 18.5847C16.1735 19.1667 16.4594 19.7013 16.879 20.1208C17.297 20.5398 18.004 21.1658 19 21.9998C20.051 21.1098 20.759 20.4838 21.121 20.1208Z" stroke="#89898B" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                          <path d="M19 17.9998V18.0098" stroke="#89898B" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                        </g>
+                                        <defs>
+                                          <clipPath id="clip0_7_227">
+                                            <rect width="24" height="24" fill="white" transform="translate(0 -0.000244141)"/>
+                                          </clipPath>
+                                        </defs>
+                                      </svg>
+                                    <p> Delivery Fee : Free</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="lg:flex gap-6 justify-center">
+                <!-- helmet -->
+                <div class="lg:flex gap-4 mb-4 p-7 border-2 border-[[#1313181A]]  lg:w-6/12 rounded-xl">
+                    <img class="pl-11 lg:pl-0 w-[280px]" src="./images/9.png" alt="">
+    
+                    <div>
+                        <div class="flex items-center gap-8">
+                            <div class="flex items-center gap-2">
+                                <i class="fa-solid fa-star text-3xl text-[#F99808]" aria-hidden="true"></i>
+                                <h3>5.0</h3>
+                            </div>
+        
+                            <div class="flex items-center gap-2">
+                                <img class="w-8 h-8"  src="./images/eye.svg" alt="" >
+                                <p>20</p>
+                            </div>
+                            
+                            <div class="flex items-center gap-2">
+                                <i class="fa-regular  text-3xl text-slate-400 fa-heart"></i>
+                                <p>200</p>
+                            </div>
+                            
+                        </div>
+        
+                        
+                        <div class="pb-5">
+                            <h2 class="text-xl font-bold pt-5 pb-3 ">World Cup Flags Football</h2>
+                            <p>Dolor sit amet consectetur. Ut urna diam quis sagittis. </p>
+                        </div>
+        
+                        <div>
+                            <div class="flex gap-5">
+                                <h2 class="text-[#FF4240] text-xl font-bold">Price - $22.00</h2>
+                                <div class="flex gap-3">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                        <g clip-path="url(#clip0_7_227)">
+                                          <path d="M4 18.9998C4 19.5302 4.21071 20.0389 4.58579 20.414C4.96086 20.789 5.46957 20.9998 6 20.9998C6.53043 20.9998 7.03914 20.789 7.41421 20.414C7.78929 20.0389 8 19.5302 8 18.9998C8 18.4693 7.78929 17.9606 7.41421 17.5855C7.03914 17.2105 6.53043 16.9998 6 16.9998C5.46957 16.9998 4.96086 17.2105 4.58579 17.5855C4.21071 17.9606 4 18.4693 4 18.9998Z" stroke="#89898B" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                          <path d="M12 16.9998H6V2.99976H4" stroke="#89898B" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                          <path d="M6 4.99976L20 5.99976L19.284 11.0108M14 12.9998H6" stroke="#89898B" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                          <path d="M21.121 20.1208C21.5406 19.7013 21.8265 19.1667 21.9423 18.5847C22.0581 18.0028 21.9988 17.3995 21.7717 16.8513C21.5447 16.3031 21.1602 15.8345 20.6668 15.5048C20.1734 15.1751 19.5934 14.9991 19 14.9991C18.4066 14.9991 17.8266 15.1751 17.3332 15.5048C16.8398 15.8345 16.4553 16.3031 16.2283 16.8513C16.0012 17.3995 15.9419 18.0028 16.0577 18.5847C16.1735 19.1667 16.4594 19.7013 16.879 20.1208C17.297 20.5398 18.004 21.1658 19 21.9998C20.051 21.1098 20.759 20.4838 21.121 20.1208Z" stroke="#89898B" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                          <path d="M19 17.9998V18.0098" stroke="#89898B" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                        </g>
+                                        <defs>
+                                          <clipPath id="clip0_7_227">
+                                            <rect width="24" height="24" fill="white" transform="translate(0 -0.000244141)"/>
+                                          </clipPath>
+                                        </defs>
+                                      </svg>
+                                    <p> Delivery Fee : Free</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- White Ball -->
+                <div class="lg:flex gap-4 mb-4 p-7 border-2 border-[[#1313181A]] lg:w-6/12 h-6/12 rounded-xl">
+                    <img class="pl-11 lg:pl-0 w-[280px]"  src="./images/10.png" alt="" >
+    
+                    <div>
+                        <div class="flex items-center gap-8">
+                            <div class="flex items-center gap-2">
+                                <i class="fa-solid fa-star text-3xl text-[#F99808]" aria-hidden="true"></i>
+                                <h3>5.0</h3>
+                            </div>
+        
+                            <div class="flex items-center gap-2">
+                                <img class="w-8 h-8 "  src="./images/eye.svg" alt="" >
+                                <p>20</p>
+                            </div>
+                            
+                            <div class="flex items-center gap-2">
+                                <i class="fa-regular  text-3xl text-slate-400 fa-heart"></i>
+                                <p>200</p>
+                            </div>
+                            
+                        </div>
+        
+                        
+                        <div class="pb-5">
+                            <h2 class="text-xl font-bold pt-5 pb-3 ">World Cup Flags Football</h2>
+                            <p>Dolor sit amet consectetur. Ut urna diam quis sagittis. </p>
+                        </div>
+        
+                        <div>
+                            <div class="flex gap-5">
+                                <h2 class="text-[#FF4240] text-xl font-bold">Price - $22.00</h2>
+                                <div class="flex gap-3">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                        <g clip-path="url(#clip0_7_227)">
+                                          <path d="M4 18.9998C4 19.5302 4.21071 20.0389 4.58579 20.414C4.96086 20.789 5.46957 20.9998 6 20.9998C6.53043 20.9998 7.03914 20.789 7.41421 20.414C7.78929 20.0389 8 19.5302 8 18.9998C8 18.4693 7.78929 17.9606 7.41421 17.5855C7.03914 17.2105 6.53043 16.9998 6 16.9998C5.46957 16.9998 4.96086 17.2105 4.58579 17.5855C4.21071 17.9606 4 18.4693 4 18.9998Z" stroke="#89898B" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                          <path d="M12 16.9998H6V2.99976H4" stroke="#89898B" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                          <path d="M6 4.99976L20 5.99976L19.284 11.0108M14 12.9998H6" stroke="#89898B" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                          <path d="M21.121 20.1208C21.5406 19.7013 21.8265 19.1667 21.9423 18.5847C22.0581 18.0028 21.9988 17.3995 21.7717 16.8513C21.5447 16.3031 21.1602 15.8345 20.6668 15.5048C20.1734 15.1751 19.5934 14.9991 19 14.9991C18.4066 14.9991 17.8266 15.1751 17.3332 15.5048C16.8398 15.8345 16.4553 16.3031 16.2283 16.8513C16.0012 17.3995 15.9419 18.0028 16.0577 18.5847C16.1735 19.1667 16.4594 19.7013 16.879 20.1208C17.297 20.5398 18.004 21.1658 19 21.9998C20.051 21.1098 20.759 20.4838 21.121 20.1208Z" stroke="#89898B" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                          <path d="M19 17.9998V18.0098" stroke="#89898B" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                        </g>
+                                        <defs>
+                                          <clipPath id="clip0_7_227">
+                                            <rect width="24" height="24" fill="white" transform="translate(0 -0.000244141)"/>
+                                          </clipPath>
+                                        </defs>
+                                      </svg>
+                                    <p> Delivery Fee : Free</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+
+
+        <!-- Clients Question -->
+        <section class="mb-24 shadow-xl">
+            <div class="text-center pt-12 pb-20 space-y-4">
+                <h1 class="text-4xl font-bold">Clients Question</h1>
+                <p>Have questions? Explore our FAQ or contact us. Your satisfaction is our priority. <br> We're here to assist our valued hockey club clients!</p>
+            </div>
+
+
+            <div class="lg:flex gap-28 items-center justify-center ">
+                <div class="sm: pl-8">
+                    <img class="sm::w-[400px] lg:w-[461px] h-[440px]"  src="./images/11.png" alt="">
+                </div>
+                <div class="">
+
+                    <!-- Our Equipment -->
+                    <div class="collapse collapse-plus bg-base-200 lg:w-[590px] rounded-sm">
+                        <input type="radio" name="my-accordion-3" checked="checked" /> 
+                        <div class="collapse-title text-xl font-medium">
+                          <h3>Our Equipment</h3>
+                        </div>
+                        <div class="collapse-content"> 
+                          <p> Explore our comprehensive array of cutting-edge tools and devices designed to enhance your experience and boost efficiency.Discover a curated selection of high-quality gear and equipment tailored to meet your specific needs and requirements. Learn about the latest instruments and apparatus available, ensuring you have the right tools for optimal performance and results. </p>
+                        </div>
+                      </div>
+                      <!-- Hockey traing -->
+                    <div class="collapse collapse-plus bg-base-200 lg:w-[590px] rounded-sm">
+                        <input type="radio" name="my-accordion-3" checked="checked" /> 
+                        <div class="collapse-title text-xl font-medium">
+                          <h3>Hockey Training</h3>
+                        </div>
+                        <div class="collapse-content"> 
+                          <p>Elevate your game with our hockey training. Unlock peak performance through expert guidance, drills, and cutting-edge techniques. Get started now!</p>
+                        </div>
+                    </div>
+                    <!-- Private lessons -->
+                    <div class="collapse collapse-plus bg-base-200 lg:w-[590px] rounded-sm">
+                        <input type="radio" name="my-accordion-3" checked="checked" /> 
+                        <div class="collapse-title text-xl font-medium">
+                          <h3>Private Lessons</h3>
+                        </div>
+                        <div class="collapse-content"> 
+                          <p>Customized personal hockey training for elite performance. Tailored drills, expert coaching. Elevate your skills with personalized guidance. Start excelling today!.</p>
+                        </div>
+                    </div>
+
+                    <!-- Ski Touring -->
+                    <div class="collapse collapse-plus bg-base-200 lg:w-[590px] rounded-sm">
+                        <input type="radio" name="my-accordion-3" checked="checked" /> 
+                        <div class="collapse-title text-xl font-medium">
+                          <h3>Ski Touring</h3>
+                        </div>
+                        <div class="collapse-content"> 
+                          <p>Embark on thrilling ski touring adventures with our hockey training club. Expert guidance, breathtaking landscapes, and a fusion of fitness and fun. Join the ultimate experience now!</p>
+                        </div>
+                    </div>
+                    <!-- booking -->
+                    <div class="collapse collapse-plus bg-base-200 lg:w-[590px] rounded-sm">
+                        <input type="radio" name="my-accordion-3" checked="checked" /> 
+                        <div class="collapse-title text-xl font-medium">
+                          <h3>Booking</h3>
+                        </div>
+                        <div class="collapse-content"> 
+                          <p>Secure your spot at our premier hockey club. Easy online booking. Join a community dedicated to skill development and camaraderie.</p>
+                        </div>
+                    </div>
+
+                    <!-- Pricings -->
+                    <div class="collapse collapse-plus bg-base-200 lg:w-[590px] rounded-sm">
+                        <input type="radio" name="my-accordion-3" checked="checked" /> 
+                        <div class="collapse-title text-xl font-medium">
+                          <h3>Pricings</h3>
+                        </div>
+                        <div class="collapse-content"> 
+                          <p>Explore our flexible pricing options at the hockey club. Choose plans that fit your commitment level. Access premium coaching, state-of-the-art facilities, and a vibrant community. Elevate your game with transparency and value.</p>
+                        </div>
+                    </div>
+
+                </div>
+                    
+            </div>
+        </section>
+
+
+
+        <!-- Get In Touch section -->
+        <section class="mb-24 pb-10  shadow-xl">
+            <div class="text-center pb-8">
+                <h1 class="text-2xl font-bold">Get In Touch</h1>
+                <p>Connect with us for a world of possibilities. Your ideas matter. Let's create something br amazing together. #GetInTouch</p>
+
+            </div>
+
+            <div class="lg:flex lg:justify-center lg:pl-28 lg:items-center gap-12">
+
+                <!-- contact information -->
+                <div class="pl-20 lg:pl-1 pb-12">
+                     <!-- phone -->
+                    <div class="bg-[#6b922d1a] pt-8 pb-8 pl-8 pr-2 w-[330px] mb-4 rounded-lg">
+                        <img src="./images/callButton.png" alt="">
+                        <p><small>Phone Number</small></p>
+                        <h6>(+62) 123-321-543</h6>
+                    </div>
+
+                    <!-- email -->
+                    <div class="bg-[#FDDD5F1A] pt-8 pb-8 pl-8 pr-2 w-[330px] mb-4 rounded-lg">
+                        <img src="./images/emailLogo.png" alt="">
+                        <p><small>Email</small></p>
+                        <h6>hockeys@support.com</h6>
+                    </div>
+
+                    <!-- Location -->
+                    <div class="bg-[#417cd41a] pt-8 pb-8 pl-8 pr-2 w-[330px] rounded-lg">
+                        <img src="./images/locationLogo.png" alt="">
+                        <p><small>Location</small></p>
+                        <h6>152/1 Mohakhali Wireless Gate</h6>
+                    </div>
+                </div>
+
+                <!-- Contact form -->
+                <div class="pl-8 lg:pl-1">
+                    <div class="mb-10">
+                        <div class="lg:flex pl-8 gap-2">
+                            <div class="pb-4">
+                                <h1 class="text-2xl ">Your Name</h1>
+                                <input class="w-80 bg-[#13131308] h-12" type="text" placeholder="Enter Your Full Name" class="input bg-[#13131308] input-lg w-" />
+                            </div>
+                            <div>
+                                <h1 class="text-2xl ">Your Email</h1>
+                                <input class="w-80 bg-[#13121208] h-12" type="text" placeholder="Enter Your Full Name" class="input bg-[#13131308] input-lg" />
+                            </div>
+                        </div>
+        
+                        <div class="lg:flex pl-10 gap-8">
+                            <div>
+                                <h1 class="text-2xl pb-2">Subject</h1>
+                                <input class="w-72 bg-[#13121208] h-12" type="text" placeholder="Enter Your Subject" class="input bg-[#13131308] input-lg w-full max-w-xs" />
+                            </div>
+
+                            <div>
+                                <h1 class="text-2xl pb-2">Phone Number</h1>
+                                <input class="w-80 bg-[#13121208] h-12" type="text" placeholder="Your Phone Number" class="input bg-[#13131308] input-lg w-full " />
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Message box -->
+                    <div class="pl-10">
+                        <h1 class="text-2xl pb-5 ">Message</h1>
+                        <!-- <input type="text" placeholder="Enter Your Message Here" class="input bg-[#13131308] input-lg w-[500px] h-[280px]" /> -->
+                        <textarea name="message area" id="" class="hideInLg bg-[#13131308]" cols="40" rows="6" placeholder="Write your message"></textarea> 
+
+                        <textarea name="message area" id="" class="hideInSm bg-[#13131308]" cols="65" rows="5" placeholder="Write your message"></textarea> 
+
+                        <button class=" w-[355px] lg:w-[605px]  h-[48px] bg-red-500 rounded-xl text-center">Send Message</button>
+
+                    </div>
+                    
+                    
+                </div>
+            </div>
+            <!-- social media -->
+            <div class="flex justify-center items-center text-center">
+                <div class=" text-center  lg:w-full  bg-slate-200 mt-10 space-y-5 p-6 rounded-xl">
+                    <h2 class="text-xl font-bold">Social Media</h2>
+                    <div class="flex justify-center items-center gap-4 pb-4">
+                        <img src="./images/twitter.jpeg" alt="" width="24" height="24" > 
+                        <img src="./images/facebook.jpeg" alt="" width="20" height="20" > 
+                        <img src="./images/instagram.jpeg" alt="" width="20" height="20" >
+                        <img src="./images/git.jpeg" alt="" width="20" height="20" >
+                    </div>
+    
+                </div>
+            </div>
+
+        </section>
+
+    </main>
+
+    <footer class="bg-neutral lg:pl-36 mb-20 pb-20">
+       
+
+        <div class=" md:container md:mx-auto lg:flex justify-between items-center flex-1 lg:pl-2 " >
+            <div class="lg:mr-44 pb-12 text-center space-y-5 pt-8">
+               
+                <div>
+                    <header class="text-white text-2xl pt-14  ">Get In Touch</header> 
+                    <p class="text-[#ffffff85] pb-4">Get in touch with us! Connect, inquire,  or join our hockey community. Your journey to excellence starts here. <br> Visit us or Contact now!</p>
+                    <div class="flex  justify-center gap-4 pb-4 hover:bg-blue-600">
+                        <img src="./images/emailFrame.png" alt="">
+                        <p class="text-[#FFFFFFCC]"> hockeys@support.com</p>
+                    </div>
+                    <div class="flex gap-4 justify-center hover:bg-blue-600">
+                        <img src="./images/callFrame.png" alt="">
+                        <p class="text-[#FFFFFFCC]"> (+62) 123-321-543</p>
+                    </div> 
+                </div>  
+            </div>
+
+
+            <div class=" footer lg:grid-cols-3 grid-cols-2 pl-16 lg:p-16 gap-20">
+                  <nav>
+                    <header class=" text-xl font-bold text-white">Company</header> 
+                    <a class="link link-hover pl-3 lg:pl-0 text-[#FFFFFF99] pt-4">About us</a>
+                    <a class="link link-hover pl-1 lg:pl-0 text-[#FFFFFF99]">Leadership</a>
+                    <a class="link link-hover pl-3 lg:pl-0 text-[#FFFFFF99]">Careers</a>
+                    <a class="link link-hover text-[#FFFFFF99]">News & Article</a>
+                    <a class="link link-hover pl-1 lg:pl-0 text-[#FFFFFF99]">Legal Notice</a>
+                  </nav> 
+                  <nav class="">
+                    <header class="text-xl font-bold text-white">Support</header> 
+                    <a class="link link-hover  text-[#FFFFFF99] pt-4">Help Center</a>
+                    <a class="link link-hover pl-6 lg:pl-0 text-[#FFFFFF99]">FAQ</a>
+                    <a class="link link-hover text-[#FFFFFF99]">Ticket Support</a>
+                    <a class="link link-hover pl-3 lg:pl-0 text-[#FFFFFF99]">Contact Us</a>
+                  </nav> 
+                  <nav class="pl-28 lg:pl-0 pt-11 lg:pt-0 ">
+                    <header class="text-xl font-bold text-white">Sevices</header> 
+                    <a class="link link-hover pl-3 lg:pl-0 text-[#FFFFFF99] pt-4">Academy</a>
+                    <a class="link link-hover text-[#FFFFFF99]">Group Lesson</a>
+                    <a class="link link-hover text-[#FFFFFF99]">Private Lesson</a>
+                    <a class="link link-hover text-[#FFFFFF99]">Hockey for Kids</a>
+                    <a class="link link-hover text-xs pl-1 lg:pl-0 text-[#FFFFFF99]">Hockey for Adult</a>
+                  </nav> 
+            </div>
+        </div>
+
+       
+       
+      </footer>
+
+      
+</body>
+
+
+
+</html>
